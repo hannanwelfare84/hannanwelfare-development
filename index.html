@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANNAN WELFARE & DEVELOPMENT ORGANIZATION | Home</title> <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-img"> 
+            <span class="ngo-name">HANNAN WELFARE & DEVELOPMENT ORGANIZATION</span> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+     <a href="donate.html" class="btn-donate">Donate Now</a>
+</li>
+        </ul>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to HANNAN WELFARE & DEVELOPMENT ORGANIZATION</h1>
+            <p>Hum mil kar zaroorat mando ki zindagi badal saktay hain.</p>
+            <p>Chhota Sa Qadam, Barri Tabdeeli.</p>
+            <a href="#projects" class="btn-main">Our Projects</a>
+        </div>
+    </header>
+
+    <section class="impact">
+        <div class="card">
+            <h3>500+</h3>
+            <p>Students Educated</p>
+        </div>
+        <div class="card">
+            <h3>1000+</h3>
+            <p>Meals Served</p>
+        </div>
+        <div class="card">
+            <h3>50+</h3>
+            <p>Volunteers</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mjgjbqlq" method="POST">
+        <label>Your Name:</label>
+        <input type="text" name="name" placeholder="Full Name" required>
+        
+        <label>Email Address:</label>
+        <input type="email" name="email" placeholder="Email Address" required>
+        
+        <label>Enter Your Massage:</label>
+        <textarea name="message" placeholder="Aap ka Paighaam" rows="5" required></textarea>
+        
+        <button type="submit" class="btn-main">Send Message</button>
+    </form>
+</section>
+
+    <footer>
+        <p>&copy; 2026 HANNAN WELFARE & DEVELOPMENT ORGANIZATION. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+<footer>
+        <p>&copy; 2026 Hannan Welfare. All Rights Reserved.</p>
+    
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 1. About link ko pakrain
+        const aboutLink = document.querySelector('a[href="#about"]');
+        const aboutSection = document.getElementById('about');
+
+        if (aboutLink) {
+            aboutLink.addEventListener('click', function(e) {
+                e.preventDefault(); // Page ko jump karne se rokta hai
+
+                // 2. Agar section chupa hua hai to dikha do, warna mita do
+                if (aboutSection.style.display === "none") {
+                    aboutSection.style.display = "block";
+                    // Thora sa scroll karke section par le jaye ga
+                    aboutSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    aboutSection.style.display = "none";
+                }
+            });
+        }
+    });
+</script>
+</body> 
+</html>
